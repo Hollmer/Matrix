@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.matrix-bracket-left {
+  border-left: 2px solid #0b1c30;
+  border-top: 2px solid #0b1c30;
+  border-bottom: 2px solid #0b1c30;
+  width: 8px;
+}
+
+.matrix-bracket-right {
+  border-right: 2px solid #0b1c30;
+  border-top: 2px solid #0b1c30;
+  border-bottom: 2px solid #0b1c30;
+  width: 8px;
+}
+
+body {
+  background-color: #f8f9ff;
+  color: #0b1c30;
+  font-family: Inter, sans-serif;
+}
