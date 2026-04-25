@@ -62,20 +62,8 @@ const Navbar = () => {
 
       {menuOpen && (
         <div className="absolute inset-x-0 top-full bottom-0 z-50 lg:hidden bg-slate-950/30 backdrop-blur-sm">
-          <div className="absolute inset-y-0 right-0 w-[min(90vw,320px)] bg-[rgb(255, 255, 255)] p-6 shadow-2xl shadow-slate-900/20 rounded-l-[40px] border-l border-slate-200 animate-slide-in">
-            <div className="mb-8 flex items-center justify-between">
-              <button
-                type="button"
-                aria-label="Cerrar menú"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-700 transition hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-teal-500"
-                onClick={() => setMenuOpen(false)}
-              >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5">
-                  <path d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-            <nav className="flex flex-col gap-4 bg-[rgb(156,156,156)] rounded-[30px] p-4">
+          <div className="absolute inset-y-0 right-0 w-[min(90vw,320px)] bg-[#ffffff] p-6 shadow-2xl shadow-slate-900/20 rounded-l-[40px] border-l border-slate-200 animate-slide-in">
+            <nav className="flex flex-col gap-4 bg-[#ffffff] rounded-[30px] p-4">
               {links.map((link) => {
                 const isActive = pathname === link.href;
                 return (
