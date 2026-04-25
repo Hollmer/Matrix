@@ -324,12 +324,6 @@ export function cramerRule(a: Matrix, b: Matrix): OperationResult {
 
   const result: Matrix = solutions.map((value) => [value]);
 
-  steps.push({
-    matrix: result,
-    operation: 'Soluciones finales x = det(A_1)/det(A), y = det(A_2)/det(A), z = det(A_3)/det(A)',
-    type: 'scale'
-  });
-
   return {
     result,
     steps

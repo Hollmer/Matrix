@@ -85,7 +85,7 @@ export default function Inverse() {
           <aside className="rounded-[2rem] border border-slate-200 bg-slate-950 p-8 shadow-2xl text-white">
             <div className="mb-6">
               <p className="text-xs uppercase tracking-[0.28em] text-teal-300 font-semibold">Controls</p>
-              <h2 className="mt-4 text-2xl font-semibold">Verify if the matrix is non-singular before proceeding.</h2>
+              <h2 className="mt-4 text-2xl font-semibold">Verifique si la matriz es no-singular antes de continuar.</h2>
             </div>
 
             <div className="space-y-4">
@@ -94,19 +94,19 @@ export default function Inverse() {
                 onClick={checkInvertibility}
                 className="w-full rounded-full bg-teal-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-teal-400"
               >
-                Check Invertibility
+                Confirmar Invertibilidad
               </button>
               <button
                 type="button"
                 onClick={solve}
                 className="w-full rounded-full bg-slate-100 px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-200"
               >
-                Step-by-Step Solve
+                Solución Paso a Paso
               </button>
             </div>
 
             <div className="mt-8 rounded-[1.5rem] bg-slate-900/90 p-5 border border-slate-800">
-              <p className="text-xs uppercase tracking-[0.24em] text-teal-300 font-semibold mb-3">Method: Adjoint</p>
+              <p className="text-xs uppercase tracking-[0.24em] text-teal-300 font-semibold mb-3">Metodo de la Adjunta</p>
               <p className="text-sm text-slate-300 leading-6">
                 El proceso incluye cálculo de determinante, matriz de menores, matriz de cofactores y transposición para obtener la matriz adjunta antes de multiplicar por 1/det(A).
               </p>

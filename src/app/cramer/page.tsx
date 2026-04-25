@@ -89,7 +89,7 @@ export default function Cramer() {
                 onClick={calculate}
                 className="inline-flex items-center justify-center rounded-full bg-slate-950 px-8 py-4 text-base font-semibold text-white transition hover:bg-slate-800"
               >
-                Calculate Solutions
+                Calcular Soluciones
               </button>
             </div>
 
@@ -101,7 +101,7 @@ export default function Cramer() {
           </section>
 
           <aside className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-2xl">
-            <p className="text-xs uppercase tracking-[0.28em] text-teal-600 font-semibold mb-4">Mathematical breakdown</p>
+            <p className="text-xs uppercase tracking-[0.28em] text-teal-600 font-semibold mb-4">Procedimiento matemático</p>
             <div className="space-y-4">
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
                 <p className="text-xs uppercase tracking-[0.24em] text-slate-500">Current step</p>

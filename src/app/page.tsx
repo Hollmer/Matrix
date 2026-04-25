@@ -31,11 +31,6 @@ const tiles = [
     description: 'Información del proyecto y créditos.',
     href: '/about'
   },
-  {
-    title: 'Recursos de Aprendizaje',
-    description: 'Notaciones, ejemplos y ejercicios guiados.',
-    href: '/about'
-  }
 ];
 
 export default function Home() {
