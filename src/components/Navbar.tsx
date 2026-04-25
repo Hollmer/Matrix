@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 
 const links = [
   { href: '/', label: 'Inicio' },
@@ -15,6 +16,7 @@ const links = [
 
 const Navbar = () => {
   const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200 shadow-sm">
@@ -23,7 +25,7 @@ const Navbar = () => {
           Matrix
         </Link>
 
-        <div className="hidden md:flex items-center gap-8 font-sans text-sm font-medium">
+        <div className="hidden lg:flex items-center gap-8 font-sans text-sm font-medium">
           {links.map((link) => {
             const isActive = pathname === link.href;
             return (
@@ -40,14 +42,61 @@ const Navbar = () => {
 
         <button
           type="button"
-          aria-label="Menú"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-teal-500 md:hidden"
+          onClick={() => setMenuOpen((prev) => !prev)}
+          aria-expanded={menuOpen}
+          aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-teal-500 lg:hidden"
         >
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-6 w-6">
-            <path d="M4 7h16M4 12h16M4 17h16" />
-          </svg>
+          <span className="sr-only">Menú</span>
+          {menuOpen ? (
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-6 w-6">
+              <path d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-6 w-6">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          )}
         </button>
       </div>
+
+      {menuOpen && (
+        <div className="fixed inset-0 z-50 lg:hidden bg-slate-950/30 backdrop-blur-sm">
+          <div className="absolute inset-y-0 right-0 w-[min(90vw,320px)] bg-white p-6 shadow-2xl shadow-slate-900/20 rounded-l-[40px] border-l border-slate-200 animate-slide-in">
+            <div className="mb-8 flex items-center justify-between">
+              <div>
+                <p className="text-xs uppercase tracking-[0.28em] text-slate-500 font-semibold">Menú</p>
+                <h2 className="text-lg font-semibold text-slate-950">Navegación</h2>
+              </div>
+              <button
+                type="button"
+                aria-label="Cerrar menú"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-700 transition hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                onClick={() => setMenuOpen(false)}
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5">
+                  <path d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <nav className="flex flex-col gap-4">
+              {links.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMenuOpen(false)}
+                    className={`block rounded-3xl px-4 py-4 text-base font-semibold transition ${isActive ? 'bg-teal-50 text-teal-700' : 'text-slate-900 hover:bg-slate-100'}`}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
+            </nav>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
