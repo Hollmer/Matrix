@@ -85,8 +85,9 @@ const MatrixInput: React.FC<MatrixInputProps> = ({ matrix, onChange, readOnly = 
                 onChange={(e) => handleChange(i, j, e.target.value)}
                 onFocus={(e) => e.currentTarget.select()}
                 onClick={(e) => e.currentTarget.select()}
+                onMouseUp={(e) => e.preventDefault()}
                 readOnly={readOnly}
-                className={`w-12 h-12 text-center border border-gray-200 ${
+                className={`w-14 h-14 text-center border border-gray-200 transition focus:outline-none focus:ring-2 focus:ring-teal-400 ${
                   readOnly ? 'bg-gray-50' : 'bg-white'
                 }`}
               />
