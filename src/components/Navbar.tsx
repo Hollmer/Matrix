@@ -60,10 +60,23 @@ const Navbar = () => {
             )}
           </button>
         </div>
+      </div>
 
-        {menuOpen && (
-          <div className="absolute right-6 top-full z-40 mt-3 w-64 rounded-3xl border border-slate-200 bg-white/95 p-4 shadow-2xl backdrop-blur-lg md:hidden">
-            <div className="flex flex-col gap-2">
+      {menuOpen && (
+        <div className="md:hidden fixed inset-0 z-50 bg-slate-900/50">
+          <div className="absolute right-0 top-0 h-full w-72 bg-white p-6 shadow-2xl">
+            <div className="flex items-center justify-between mb-6">
+              <div className="text-lg font-semibold text-slate-900">Navegación</div>
+              <button
+                type="button"
+                aria-label="Cerrar menú"
+                className="text-slate-600 hover:text-slate-900 focus:outline-none"
+                onClick={() => setMenuOpen(false)}
+              >
+                ×
+              </button>
+            </div>
+            <nav className="flex flex-col gap-4">
               {links.map((link) => {
                 const isActive = pathname === link.href;
                 return (
@@ -71,16 +84,16 @@ const Navbar = () => {
                     key={link.href}
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className={`rounded-2xl px-4 py-3 text-sm font-medium transition ${isActive ? 'bg-teal-50 text-teal-700' : 'text-slate-700 hover:bg-slate-100'}`}
+                    className={`block rounded-lg px-3 py-3 text-base font-medium transition ${isActive ? 'bg-teal-50 text-teal-700' : 'text-slate-700 hover:bg-slate-100'}`}
                   >
                     {link.label}
                   </Link>
                 );
               })}
-            </div>
+            </nav>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </nav>
   );
 };
