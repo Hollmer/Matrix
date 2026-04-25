@@ -30,7 +30,7 @@ export default function GaussianElimination() {
 
   return (
     <main className="min-h-screen bg-surface-bright py-10">
-      <div className="mx-auto flex w-full max-w-6xl flex-col px-6">
+      <div className="w-full max-w-full flex-col px-2 sm:px-4">
         <div className="mx-auto w-full text-center mb-10 max-w-4xl">
           <p className="text-xs uppercase tracking-[0.32em] text-teal-600 font-semibold mb-3">Eliminación Gaussiana</p>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-950">Gaussian Elimination</h1>

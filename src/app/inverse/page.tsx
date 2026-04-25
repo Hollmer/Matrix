@@ -53,8 +53,8 @@ export default function Inverse() {
 
   return (
     <main className="min-h-screen bg-surface-bright py-10">
-      <div className="mx-auto w-full max-w-7xl px-6">
-        <div className="mx-auto max-w-5xl text-center mb-10">
+      <div className="w-full max-w-full px-2 sm:px-4">
+        <div className="mx-auto w-full max-w-[98%] text-center mb-10">
           <p className="text-xs uppercase tracking-[0.32em] text-teal-600 font-semibold mb-2">MATRIX INVERSE SOLVER</p>
           <h1 className="text-5xl font-bold text-slate-950 mb-4">Inverse Matrix Solver</h1>
           <p className="text-slate-600 text-lg leading-8">

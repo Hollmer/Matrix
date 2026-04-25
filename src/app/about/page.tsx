@@ -1,11 +1,11 @@
 ﻿export default function About() {
   return (
     <main className="min-h-screen bg-surface-bright py-16">
-      <div className="mx-auto w-full max-w-6xl px-6">
+      <div className="w-full max-w-full px-2 sm:px-4">
         <div className="text-center mb-12">
           <p className="text-xs uppercase tracking-[0.32em] text-teal-600 font-semibold mb-3">Producto del curso: Álgebra Lineal</p>
           <h1 className="text-5xl font-bold text-slate-950 mb-4">Sobre Nosotros:</h1>
-          <p className="mx-auto max-w-2xl text-slate-600 text-lg leading-8">
+          <p className="mx-auto w-full max-w-[98%] text-slate-600 text-lg leading-8">
             Matrix es una suite educativa creada para facilitar el aprendizaje de álgebra lineal mediante visualizaciones limpias y procesos paso a paso. Esta plataforma combina cálculo interactivo con diseño claro para apoyar a los estudiantes en su proceso de aprendizaje.
           </p>
         </div>

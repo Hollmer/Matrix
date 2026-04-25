@@ -44,8 +44,8 @@ export default function Cramer() {
 
   return (
     <main className="min-h-screen bg-surface-bright py-10">
-      <div className="mx-auto w-full max-w-7xl px-6">
-        <div className="mx-auto max-w-5xl text-center mb-10">
+      <div className="w-full max-w-full px-2 sm:px-4">
+        <div className="mx-auto w-full max-w-[98%] text-center mb-10">
           <p className="text-xs uppercase tracking-[0.32em] text-teal-600 font-semibold mb-2">Cramer&apos;s Rule Solver</p>
           <h1 className="text-5xl font-bold text-slate-950 mb-4">Cramer&apos;s Rule Solver</h1>
           <p className="text-slate-600 text-lg leading-8">

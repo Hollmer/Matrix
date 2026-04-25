@@ -36,8 +36,8 @@ const tiles = [
 export default function Home() {
   return (
     <main className="min-h-screen bg-surface-bright py-14">
-      <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto text-center mb-12">
+      <div className="w-full px-2 sm:px-4">
+        <div className="mx-auto w-full max-w-[98%] md:max-w-4xl text-center mb-12">
           <p className="text-sm uppercase tracking-[0.32em] text-teal-600 font-semibold mb-3">Bienvenido a Matrix</p>
           <h1 className="text-5xl font-bold text-slate-950 mb-4">Bienvenido a Matrix</h1>
           <p className="text-slate-600 text-lg leading-8">
@@ -45,9 +45,9 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+        <div className="mx-auto w-full max-w-[95%] grid grid-cols-1 gap-6 md:max-w-none md:grid-cols-2 xl:grid-cols-3">
           {tiles.map((tile) => (
-            <Link key={tile.title} href={tile.href} className="group block rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+            <Link key={tile.title} href={tile.href} className="group block w-full rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
               <div className="flex items-center justify-between gap-4 mb-4">
                 <h2 className="text-xl font-semibold text-slate-950">{tile.title}</h2>
                 <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-teal-600 text-white text-lg font-bold">+</span>

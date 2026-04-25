@@ -216,8 +216,8 @@ export default function BasicOperations() {
 
   return (
     <>
-      <main className="min-h-screen flex items-center justify-center bg-surface-bright px-6 py-10">
-        <div className="w-full max-w-6xl">
+      <main className="min-h-screen flex items-center justify-start bg-surface-bright px-2 sm:px-4 py-10">
+        <div className="w-full max-w-full">
           <div className="bg-white rounded-[2rem] shadow-2xl border border-slate-200 overflow-hidden">
             <div className="p-8">
               <header className="text-center mb-10">

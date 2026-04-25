@@ -22,8 +22,8 @@ export default function RootLayout({
       <body className="min-h-screen bg-surface-bright text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container overflow-x-hidden">
         <div className="app-shell">
           <Navbar />
-          <div className="flex min-h-screen justify-center px-4 sm:px-6">
-            <div className="w-full max-w-7xl">
+          <div className="flex min-h-screen justify-start px-2 sm:px-4">
+            <div className="w-full max-w-full">
               {children}
             </div>
           </div>
