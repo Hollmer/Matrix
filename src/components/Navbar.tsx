@@ -62,12 +62,8 @@ const Navbar = () => {
 
       {menuOpen && (
         <div className="absolute inset-x-0 top-full bottom-0 z-50 lg:hidden bg-slate-950/30 backdrop-blur-sm">
-          <div className="absolute inset-y-0 right-0 w-[min(90vw,320px)] bg-white p-6 shadow-2xl shadow-slate-900/20 rounded-l-[40px] border-l border-slate-200 animate-slide-in">
+          <div className="absolute inset-y-0 right-0 w-[min(90vw,320px)] bg-[rgb(255, 255, 255)] p-6 shadow-2xl shadow-slate-900/20 rounded-l-[40px] border-l border-slate-200 animate-slide-in">
             <div className="mb-8 flex items-center justify-between">
-              <div>
-                <p className="text-xs uppercase tracking-[0.28em] text-slate-500 font-semibold">Menú</p>
-                <h2 className="text-lg font-semibold text-slate-950">Navegación</h2>
-              </div>
               <button
                 type="button"
                 aria-label="Cerrar menú"
@@ -79,7 +75,7 @@ const Navbar = () => {
                 </svg>
               </button>
             </div>
-            <nav className="flex flex-col gap-4">
+            <nav className="flex flex-col gap-4 bg-[rgb(156,156,156)] rounded-[30px] p-4">
               {links.map((link) => {
                 const isActive = pathname === link.href;
                 return (
