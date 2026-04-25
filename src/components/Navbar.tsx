@@ -19,7 +19,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200 shadow-sm">
+    <nav className="relative bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200 shadow-sm">
       <div className="mx-auto flex max-w-screen-2xl items-center justify-between px-6 py-4">
         <Link href="/" className="text-2xl font-black tracking-tighter text-slate-900">
           Matrix
@@ -61,7 +61,7 @@ const Navbar = () => {
       </div>
 
       {menuOpen && (
-        <div className="fixed inset-0 z-50 lg:hidden bg-slate-950/30 backdrop-blur-sm">
+        <div className="absolute inset-x-0 top-full bottom-0 z-50 lg:hidden bg-slate-950/30 backdrop-blur-sm">
           <div className="absolute inset-y-0 right-0 w-[min(90vw,320px)] bg-white p-6 shadow-2xl shadow-slate-900/20 rounded-l-[40px] border-l border-slate-200 animate-slide-in">
             <div className="mb-8 flex items-center justify-between">
               <div>
