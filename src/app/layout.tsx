@@ -23,7 +23,7 @@ export default function RootLayout({
         <div className="app-shell">
           <Navbar />
           <div className="flex min-h-screen justify-center px-4 sm:px-6">
-            <div className="w-full max-w-7xl">
+            <div className="w-full max-w-6xl">
               {children}
             </div>
           </div>

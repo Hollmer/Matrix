@@ -40,12 +40,3 @@ body {
   width: 100%;
   max-width: 100%;
 }
-
-@media (max-width: 767px) {
-  .app-shell {
-    transform: scale(0.75);
-    transform-origin: top center;
-    width: 133.333%;
-    zoom: 0.75;
-  }
-}
