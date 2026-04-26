@@ -302,6 +302,9 @@ export default function BasicOperations() {
                               type="number"
                               value={cell}
                               onChange={(e) => handleMatrixAChange(i, j, e.target.value)}
+                              onFocus={(e) => e.currentTarget.select()}
+                              onClick={(e) => e.currentTarget.select()}
+                              onMouseUp={(e) => e.preventDefault()}
                               className="w-16 h-16 text-center font-matrix-data text-matrix-data border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-secondary"
                             />
                           ))
@@ -358,6 +361,9 @@ export default function BasicOperations() {
                               type="number"
                               value={cell}
                               onChange={(e) => handleMatrixBChange(i, j, e.target.value)}
+                              onFocus={(e) => e.currentTarget.select()}
+                              onClick={(e) => e.currentTarget.select()}
+                              onMouseUp={(e) => e.preventDefault()}
                               className="w-16 h-16 text-center font-matrix-data text-matrix-data border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-secondary"
                             />
                           ))
